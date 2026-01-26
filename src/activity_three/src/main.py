@@ -38,6 +38,7 @@ def main(answer: int = 1, low: int = 1, high: int = 100, count: int = 1):
             answer = generate(low = low, high = high)
         else:
             count += 1
+            # Stretch goal for progressive easing
             answer = make_progressive(guess = guess, answer = answer)
     
 
