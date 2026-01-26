@@ -1,0 +1,12 @@
+- description: "[ACTIVITY TWO] Program does not encounter any errors"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py::test_main_exec_no_err
+- description: "[ACTIVITY TWO] Program does not print 'Hello, World!'"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py::test_main_exec_hello_output
+- description: "[ACTIVITY TWO] Program returns a correct result to computation"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py::test_main_exec_compute_output

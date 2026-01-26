@@ -1,0 +1,29 @@
+- description: "[ACTIVITY TWO] Program does not encounter any errors"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py::test_main_exec_no_err
+- description: "[ACTIVITY TWO] Program does not print 'Hello, World!'"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py::test_main_exec_hello_output
+- description: "[ACTIVITY TWO] Program returns a correct result to computation"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py
+- description: "[ACTIVITY TWO] Program prints 'Calculating {n0}-{n1}'"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_two.py::test_main_exec_calculate_spread_output
+- src/main.py:
+  - description: "[ACTIVITY TWO] Code contains at least two print() statements"
+    check: MatchFileFragment
+    options: 
+      fragment: "print("
+      count: 2
+      exact: false
+  - description: "[ACTIVITY TWO] Code contains at least three int() conversions"
+    check: MatchFileFragment
+    options:
+      fragment: "int("
+      count: 3
+      exact: false

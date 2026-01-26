@@ -1,0 +1,16 @@
+- description: "[ACTIVITY THREE] Program does not encounter any errors"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_main_exec_no_err
+- description: "[ACTIVITY THREE] message function returns the correct strings"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_message_with_statuses
+- description: "[ACTIVITY THREE] evaluate function returns only booleans"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_evaluate_for_type
+- description: "[ACTIVITY THREE] All functions are correctly annotated (parameters and return types)"
+  check: ExecuteCommand
+  options:
+    command: uv run mypy src/main.py

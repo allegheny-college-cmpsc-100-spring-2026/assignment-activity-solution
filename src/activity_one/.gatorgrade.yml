@@ -1,0 +1,25 @@
+- profile.md:
+  - description: "[PROFILE] No TODOs remain in the text of the profile"
+    check: MatchFileRegex
+    options:
+      regex: "\\n`TODO`|\\|`TODO`"
+      count: 0
+      exact: True
+  - description: "[PROFILE] Profile includes an additional list (there are already 4)"
+    check: CountMarkdownTags
+    options:
+      tag: list
+      count: 4
+      exact: false
+  - description: "[PROFILE] You've filled out at least 2 sets of checkboxes"
+    check: MatchFileRegex
+    options:
+      regex: "(?<!```\\n)\\-(\\s)?\\[x\\]"
+      count: 2
+      exact: false
+  - description: "[PROFILE] Profile includes an image, and it better be a cat"
+    check: CountMarkdownTags
+    options:
+      tag: image
+      count: 1
+      exact: false
