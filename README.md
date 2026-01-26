@@ -68,9 +68,9 @@ For `Activity 3`, we'll be exploring `functions` and `conditional statements`: w
 3. Judges if those guess are right, too low, or too high
 4. Invites winners to play another round
 
-This task is deceptively simple, but with our new tools, it should also read _deceptively easy_.
+This task is deceptively simple, but with our new tools, it should also read _deceptively easy_. Here, we rely on the descriptive names of functions _and_ good comments!
 
 > [!NOTE]
-> As a stretch goal, we _could_ implement a function to introduce some progressive difficulty.
+> As a stretch goal, we _could_ implement a function to introduce some progressive easing.
 > * For each incorrect guess, regenerate a random number between the guess and the correct answer, uninclusive of the guessed number
 > * How would we go about implementing this?

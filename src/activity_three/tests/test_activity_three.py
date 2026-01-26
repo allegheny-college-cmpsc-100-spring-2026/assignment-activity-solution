@@ -17,13 +17,12 @@ def test_message_with_statuses(capsys):
     for status in statuses:
         assert message(status) == f"You were {status}!"
 
-def test_evaluate_for_type(capsys):
-    guess = random.randint(1,100)
-    assert type(evaluate(guess)) == bool
+def test_generate_for_type(capsys):
+    seed = generate(low = 100, high = 100)
+    assert type(seed) == int and 1 <= seed <= 100
 
-def test_play_game_until_win(capsys):
-    numbers = list(range(1,101))
-    for number in numbers:
-        if evaluate(number):
-            break
-    assert evaluate(number) == True
+def test_play_game_for_win(capsys):
+    with patch("builtins.input", side_effect = ["85", "n"]):
+        main(answer = 85)
+    out, err = capsys.readouterr()
+    assert 'You were right on!' in out.split("\n")
