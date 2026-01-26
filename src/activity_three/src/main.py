@@ -8,12 +8,12 @@ def generate(low: int = 1, high: int = 100) -> int:
 
 def make_progressive(guess: int = 1, answer: int = 1) -> int:
     if guess > answer:
-        answer = generate(low = answer, high = guess - 1)
+        answer = generate(low = answer, high = guess)
     else:
-        answer = generate(low = guess + 1, high = answer)
+        answer = generate(low = guess, high = answer)
     return answer
 
-def main(answer: int = 1, low: int = 1, high: int = 100):
+def main(answer: int = 1, low: int = 1, high: int = 100, count: int = 1):
     again = True
     right = False
     
@@ -25,15 +25,20 @@ def main(answer: int = 1, low: int = 1, high: int = 100):
         print(message(text = "too high"))
     else:
         print(message())
-    
-    again = input("Guess again (y/n)? ").lower() == "y"
+        right = True
+
     # Evaluate right/wrong, and playing again
+    if right:
+        print(f"It took you {count} guess(es)")
+        again = input("Guess again (y/n)? ").lower() == "y"
     if right and again:
+        count = 0
         answer = generate(low = low, high = high)
     elif not right and again:
+        count += 1
         answer = make_progressive(guess = guess, answer = answer)
     if again:
-        main(answer = answer)
+        main(answer = answer, count = count)
     
 
 if __name__ == "__main__":

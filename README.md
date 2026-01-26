@@ -6,7 +6,8 @@
 |:--------|:-----------------|
 |Activity 1|[![Activity 1](../../actions/workflows/activity_one.yml/badge.svg?branch=main)](../../actions/workflows/activity_one.yml)|
 |Activity 2|[![Activity 2](../../actions/workflows/activity_two.yml/badge.svg?branch=main)](../../actions/workflows/activity_two.yml)|
-|Activity 2|[![Activity 2](../../actions/workflows/activity_three.yml/badge.svg?branch=main)](../../actions/workflows/activity_three.yml)|
+|Activity 3|[![Activity 3](../../actions/workflows/activity_three.yml/badge.svg?branch=main)](../../actions/workflows/activity_three.yml)|
+|Actiity 3 (Stretch Goal) |[![Activity 3 Stretch](../../actions/workflows/activity_three_stretch.yml/badge.svg?branch=main)](../../actions/workflows/activity_three_stretch.yml)|
 
 This repository will contain the various activities we will complete during our time together in class. This `README` will regularly update with new content about those activities, to provide context and additional information for what we're doing on a given day. This document may link to additional information, contain diagrams, or provide important details.
 
