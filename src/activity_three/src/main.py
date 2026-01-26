@@ -31,6 +31,7 @@ def main(answer: int = 1, low: int = 1, high: int = 100, count: int = 1):
         # Evaluate right/wrong, and playing again
         if right:
             print(f"It took you {count} guess(es)")
+            # Reset count and "rightness"
             count = 0
             right = False
             again = input("Guess again (y/n)? ").lower() == "y"
