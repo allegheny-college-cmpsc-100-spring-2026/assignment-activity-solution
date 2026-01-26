@@ -18,6 +18,7 @@ def main(answer: int = 1, low: int = 1, high: int = 100, count: int = 1):
     right = False
 
     while again:
+        
         guess = int(input(f"Guess a number between {low}-{high}: "))
         # Evaluate answer and guess
         if guess < answer:
