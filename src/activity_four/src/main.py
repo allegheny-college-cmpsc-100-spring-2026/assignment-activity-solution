@@ -1,5 +1,4 @@
 from WordList import List
-from typing import Generator
 
 def is_dbl(word: str = "", limit: int = 1) -> bool:
     """ 

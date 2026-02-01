@@ -44,6 +44,7 @@ def main(answer: int = 1, low: int = 1, high: int = 100, count: int = 1):
     
 
 if __name__ == "__main__":
-    low, high = 1, 100
+    # I'm thinking of a number...
+    low, high = 1, 10
     answer = generate(low = low, high = high)
     main(answer = answer)
