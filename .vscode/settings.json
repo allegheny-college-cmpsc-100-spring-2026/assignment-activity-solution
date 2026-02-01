@@ -18,5 +18,9 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80
   },
-  "editor.tabSize": 4
+  "editor.tabSize": 4,
+  "python.analysis.extraPaths": [
+    "./src/activity_four/src",
+    "./src/activity_five/src"
+  ]
 }
