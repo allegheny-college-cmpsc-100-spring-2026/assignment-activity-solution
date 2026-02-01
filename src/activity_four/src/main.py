@@ -15,7 +15,7 @@ def is_dbl(word: str = "", limit: int = 1) -> bool:
     """
     # If there are no more words, bail immediately
     if not word: 
-        return
+        return False
     # Setup our count for words with double letter clusters
     num_of_dbls = 0
     prev, next = None, None
