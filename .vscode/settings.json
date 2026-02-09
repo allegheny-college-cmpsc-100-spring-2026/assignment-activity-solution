@@ -22,5 +22,12 @@
   "python.analysis.extraPaths": [
     "./src/activity_four/src",
     "./src/activity_five/src"
-  ]
+  ],
+  "micropico.gcBeforeUpload": true,
+  "micropico.softResetAfterUpload": true,
+  "micropico.syncFolder": "src",
+  "mpremote.command": "uv run mpremote",
+  "mpremote.srcSubdirectory": "src",
+  "mpremote.startupCheck.skip": true,
+  "mpremote.project.uv": true
 }

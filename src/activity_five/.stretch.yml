@@ -1,0 +1,24 @@
+- description: "[ACTIVITY THREE] Program does not encounter any errors"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_main_exec_no_err
+- description: "[ACTIVITY THREE] message function returns the correct strings"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_message_with_statuses
+- description: "[ACTIVITY THREE] Can achieve a win"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_play_game_for_win
+- description: "[ACTIVITY THREE] Progressive easing works if guess is lower"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_make_progressive_low
+- description: "[ACTIVITY THREE] Progressive easing works if guess is higher"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_three.py::test_make_progressive_high
+- description: "[ACTIVITY THREE] All functions are correctly annotated (parameters and return types)"
+  check: ExecuteCommand
+  options:
+    command: uv run mypy src/main.py
