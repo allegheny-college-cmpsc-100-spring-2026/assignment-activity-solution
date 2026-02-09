@@ -12,11 +12,13 @@ def generate(items: int = random.randint(5, 10)) -> list:
     :return: Description
     :rtype: list
     """
-    return list(
+    numbers =  list(
         set(
             [random.randint(1,items) for _ in range(items)]
         )
     )
+    random.shuffle(numbers)
+    return numbers
 
 def reset_instruction() -> list:
     """
@@ -59,10 +61,12 @@ def select(values: list = [], choice: list = []) -> list:
     :return: Description
     :rtype: list
     """
-    swap_from = values[choice[0] - 1]
-    swap_with = values[choice[1] - 1]
-    values[choice[0] - 1] = swap_with
-    values[choice[1] - 1] = swap_from
+    first = choice[0] - 1
+    second = choice[1] - 1
+    swap_from = values[first]
+    swap_with = values[second]
+    values[first] = swap_with
+    values[second] = swap_from
     return values
 
 def main(values: list = []):
