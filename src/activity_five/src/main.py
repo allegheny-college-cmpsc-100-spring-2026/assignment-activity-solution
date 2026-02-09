@@ -4,6 +4,14 @@ from time import sleep
 from machine import Pin
 
 def generate(items: int = random.randint(5, 10)) -> list:
+    """
+    Generates a list of unique numbers
+    
+    :param items: Description
+    :type items: int
+    :return: Description
+    :rtype: list
+    """
     return list(
         set(
             [random.randint(1,items) for _ in range(items)]
@@ -11,9 +19,23 @@ def generate(items: int = random.randint(5, 10)) -> list:
     )
 
 def reset_instruction() -> list:
+    """
+    Reusable list resetting
+    
+    :return: Description
+    :rtype: list
+    """
     return []
 
 def press(btn: Pin) -> str:
+    """
+    Determines what kind of press we recieve
+    
+    :param btn: Description
+    :type btn: Pin
+    :return: Description
+    :rtype: str
+    """
     seconds = 0
     while btn.value() == 0:
         seconds += .2
@@ -24,6 +46,16 @@ def press(btn: Pin) -> str:
         return "long"
 
 def select(values: list = [], choice: list = []) -> list:
+    """
+    Swaps the numbers that we select
+    
+    :param values: Description
+    :type values: list
+    :param choice: Description
+    :type choice: list
+    :return: Description
+    :rtype: list
+    """
     swap_from = values[choice[0] - 1]
     swap_with = values[choice[1] - 1]
     values[choice[0] - 1] = swap_with
