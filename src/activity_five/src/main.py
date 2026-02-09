@@ -37,12 +37,15 @@ def press(btn: Pin) -> str:
     :rtype: str
     """
     seconds = 0
+    led = Pin("LED", Pin.OUT)
     while btn.value() == 0:
+        led.on()
         seconds += .2
-        sleep(.15)
+        sleep(.1)
+    led.off()
     if .1 < seconds < .5:
         return "short"
-    if .5 < seconds:
+    elif .5 < seconds:
         return "long"
 
 def select(values: list = [], choice: list = []) -> list:
@@ -65,7 +68,6 @@ def select(values: list = [], choice: list = []) -> list:
 def main(values: list = []):
 
     btn = Pin(16, Pin.IN, Pin.PULL_UP)
-    led = Pin("LED", Pin.OUT)
 
     print(f"Starting values: {values}")
 
@@ -80,7 +82,6 @@ def main(values: list = []):
             print(f"New values: {values}")
 
         if btn.value() == 0:
-            led.on()
             signal = press(btn = btn)
 
             if signal == "long" and len(instruction) > 1:
@@ -93,11 +94,10 @@ def main(values: list = []):
                 count = 0
                 print(instruction)
             
-            if signal == "short":
+            elif signal == "short":
                 count += 1
 
-            sleep(.15)
-        led.off()
+    print(values)
 
 if __name__ == "__main__":
     random_list = generate()
