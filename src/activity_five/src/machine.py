@@ -16,15 +16,18 @@ class Pin:
             self.press_type = kwargs["value"]
         else:
             self.press_type = [
+                "short", "short", "short", "long",
+                "short", "long",
                 "short", "long",
                 "short", "short", "long",
-                "short", "short", "short", "long",
-                "short", "long"
+                "short", "long",
+                "short", "short", "short", "short", "long"
             ]
         self.press_start = time.time()
 
     def value(self) -> int:
         press_duration = time.time() - self.press_start
+        if len(self.press_type) == 0: return 1
         type = self.press_type[0]
         if type == "long" and press_duration > .5:
             self.press_type.pop(0)

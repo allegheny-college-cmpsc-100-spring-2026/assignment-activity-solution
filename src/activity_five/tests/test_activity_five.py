@@ -30,7 +30,7 @@ def test_swap_selected_values():
         1, 9, 5, 10, 20, 2, 33
     ]
 
-def test_mock_longer_problem(capsys):
+def test_mock_longer_problem():
     values = [1, 10, 5, 9, 20, 2, 33]
     instructions = [
         [2,6],
@@ -39,3 +39,9 @@ def test_mock_longer_problem(capsys):
     for inst in instructions:
         values = select(values, inst)
     assert values == [1, 2, 5, 9, 10, 20, 33]
+
+def test_mock_framework_presses(capsys):
+    main([3,4,2,1])
+    out, err = capsys.readouterr()
+    out = eval(list(out.split("\n"))[-2])
+    assert out == [1, 2,         3, 4]

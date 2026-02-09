@@ -18,3 +18,7 @@
   check: ExecuteCommand
   options:
     command: uv run pytest tests/test_activity_five.py::test_mock_longer_problem
+- description: "[ACTIVITY FIVE] Program sorts an arbitrary list correctly"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_mock_framework_presses
