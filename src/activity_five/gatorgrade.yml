@@ -1,16 +1,20 @@
-- description: "[ACTIVITY THREE] Program does not encounter any errors"
+- description: "[ACTIVITY FIVE] Program senses short button press"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_three.py::test_main_exec_no_err
-- description: "[ACTIVITY THREE] message function returns the correct strings"
+    command: uv run pytest tests/test_activity_five.py::test_signal_output_short
+- description: "[ACTIVITY FIVE] Program senses long button press"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_three.py::test_message_with_statuses
-- description: "[ACTIVITY THREE] Can achieve a win"
+    command: uv run pytest tests/test_activity_five.py::test_signal_output_long
+- description: "[ACTIVITY FIVE] Program contains function that resets to empty list"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_three.py::test_play_game_for_win
-- description: "[ACTIVITY THREE] All functions are correctly annotated (parameters and return types)"
+    command: uv run pytest tests/test_activity_five.py::test_reset_list
+- description: "[ACTIVITY FIVE] Program contains function that swaps values correctly"
   check: ExecuteCommand
   options:
-    command: uv run mypy src/main.py
+    command: uv run pytest tests/test_activity_five.py::test_swap_selected_values
+- description: "[ACTIVITY FIVE] Program can solve a longer problem"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_mock_longer_problem
