@@ -78,3 +78,23 @@ This task is deceptively simple, but with our new tools, it should also read _de
 > As a stretch goal, we _could_ implement a function to introduce some progressive easing.
 > * For each incorrect guess, regenerate a random number between the guess and the correct answer, uninclusive of the guessed number
 > * How would we go about implementing this?
+
+## Activity 4
+
+There exists a category of words called a `double`. Examples include:
+
+* babble
+* assassin
+* Mississippi
+
+In the case of the latter two, there are `double doubles` and `triple doubles`. How can we write a program that will look at a given word and use functions to help us sort out a massive list of 14,000+ words?
+
+## Activity 5
+
+Given an unsorted list of numbers, we must write a program that can sort them. However, this is a bit harder given that our input can only be our Raspberry Pi Pico and a _single button_. Hence, we have to come up with some standard by which we can sort with such a limited keypad.
+
+This activity proposes the following format: a `list` which contains two instructions. The first number is the first position to swap _from_, and the second number contains the next position to swap to. For example: `[1, 5]` would rearrange the following list:
+```python
+[1, 3, 2, 4, 5] -> [5, 3, 2, 4, 1]
+```
+But that won't do! We need it to be `[1, 2, 3, 4, 5]`! How can we achieve this with our limited means?
