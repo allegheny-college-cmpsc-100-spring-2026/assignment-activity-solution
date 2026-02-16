@@ -10,6 +10,7 @@
 |Activity 3 (Stretch Goal) |[![Activity 3 Stretch](../../actions/workflows/activity_three_stretch.yml/badge.svg?branch=main)](../../actions/workflows/activity_three_stretch.yml)|
 |Activity 4 |[![Activity 4](../../actions/workflows/activity_four.yml/badge.svg?branch=main)](../../actions/workflows/activity_four.yml)|
 |Activity 5 |[![Activity 5](../../actions/workflows/activity_five.yml/badge.svg?branch=main)](../../actions/workflows/activity_five.yml)|
+|Activity 6 |[![Activity 6](../../actions/workflows/activity_six.yml/badge.svg?branch=main)](../../actions/workflows/activity_six.yml)|
 
 
 This repository will contain the various activities we will complete during our time together in class. This `README` will regularly update with new content about those activities, to provide context and additional information for what we're doing on a given day. This document may link to additional information, contain diagrams, or provide important details.
@@ -98,3 +99,15 @@ This activity proposes the following format: a `list` which contains two instruc
 [1, 3, 2, 4, 5] -> [5, 3, 2, 4, 1]
 ```
 But that won't do! We need it to be `[1, 2, 3, 4, 5]`! How can we achieve this with our limited means?
+
+## Activity 6
+
+Now that we know some Python, we need to put it to work. The instructor has arbitrarily decided to open a fruit stand that sells a wide array of fruit! This system should:
+
+* allow users to input a fruit
+* add quantity to their stock of that fruit
+* change the price of that fruit
+* list their inventory
+* sell a given valid amount of their inventory
+
+These functions will leverage a new structure, the `dictionary`, which will help us organize our data into something retrievable -- not just storable!
