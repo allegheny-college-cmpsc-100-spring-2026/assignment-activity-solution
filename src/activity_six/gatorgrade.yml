@@ -1,0 +1,24 @@
+- description: "[ACTIVITY FIVE] Program senses short button press"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_signal_output_short
+- description: "[ACTIVITY FIVE] Program senses long button press"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_signal_output_long
+- description: "[ACTIVITY FIVE] Program contains function that resets to empty list"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_reset_list
+- description: "[ACTIVITY FIVE] Program contains function that swaps values correctly"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_swap_selected_values
+- description: "[ACTIVITY FIVE] Program can solve a longer problem"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_mock_longer_problem
+- description: "[ACTIVITY FIVE] Program sorts an arbitrary list correctly"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_five.py::test_mock_framework_presses

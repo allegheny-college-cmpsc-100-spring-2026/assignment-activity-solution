@@ -7,7 +7,8 @@ dependencies = [
     "mypy",
     "pytest",
     "mpremote",
-    "micropython-rp2-pico-stubs"
+    "micropython-rp2-pico-stubs",
+    "requests"
 ]
 
 [tool.pytest]

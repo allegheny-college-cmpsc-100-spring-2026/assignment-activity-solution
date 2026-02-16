@@ -12,6 +12,7 @@ dependencies = [
     { name = "mpremote" },
     { name = "mypy" },
     { name = "pytest" },
+    { name = "requests" },
 ]
 
 [package.metadata]
@@ -21,6 +22,7 @@ requires-dist = [
     { name = "mpremote" },
     { name = "mypy" },
     { name = "pytest" },
+    { name = "requests" },
 ]
 
 [[package]]
