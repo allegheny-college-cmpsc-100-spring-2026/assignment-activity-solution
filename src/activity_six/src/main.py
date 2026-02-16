@@ -12,15 +12,30 @@ def add_item(name: str = "", inventory: dict = {}) -> bool:
         return True
     return False
 
-def check_item(name: str = "", inventory: dict = {}) -> dict:
+def check_item(name: str = "", inventory: dict = {}) -> None:
     if not query_inventory(name, inventory):
         response = input(f"Add {name} to inventory? ").lower()
         if response == "y":
             add_item(name, inventory)
 
-def adjust_qty(name: str = "", qty: int = 0, inventory: dict = {}):
-    if inventory[name]["qty"] > 0:
-        inventory[name]["qty"] -= qty
+def adjust_qty(name: str = "", qty: int = 0, inventory: dict = {}) -> bool:
+    if inventory[name]["qty"] + qty >= 0:
+        inventory[name]["qty"] += qty
+        return True
+    return False
+
+def adjust_price(name: str = "", price: int = 0, inventory: dict = {}) -> None:
+    inventory[name]["price"] = price
+
+def calculate_sale(
+        name: str = "", 
+        qty: int = 0,  
+        inventory: dict = {}
+    ) -> None:
+    if adjust_qty(name, -1 * qty, inventory):
+        print(f"SALE: {qty} {name} ${inventory[name]["price"] * qty}")
+    else:
+        print("We can't sell that many!")
 
 def show_all(inventory: dict = {}) -> None:
     print("Name\tPrice\tQuantity")
@@ -44,7 +59,7 @@ def main():
             case "2":
                 check_item(name = item, inventory = inventory)
                 price = float(input("Enter price: $"))
-                inventory[item]["price"] = price
+                adjust_price(name = item, price = price, inventory = inventory)
             case "3":
                 check_item(name = item, inventory = inventory)
                 qty = int(input("Enter qty: "))
@@ -57,8 +72,11 @@ def main():
             case "6":
                 check_item(name = item, inventory = inventory)
                 qty = int(input("Enter quantity to sell: "))
-                adjust_qty(name = item, qty = qty, inventory = inventory)
-                print(f"SALE: {qty} {item}: {inventory[item]["qty"] * qty}")
+                calculate_sale(
+                    name = item, 
+                    qty = qty, 
+                    inventory = inventory
+                )
             case _:
                 pass
         sleep(delay)

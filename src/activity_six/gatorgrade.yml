@@ -1,24 +1,44 @@
-- description: "[ACTIVITY FIVE] Program senses short button press"
+- description: "[ACTIVITY SIX] Program completes without error"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_five.py::test_signal_output_short
-- description: "[ACTIVITY FIVE] Program senses long button press"
+    command: uv run pytest tests/test_activity_six.py::test_main_inventory_system_menu_and_exit
+- description: "[ACTIVITY SIX] Program refuses an incorrect inventory adjustment"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_five.py::test_signal_output_long
-- description: "[ACTIVITY FIVE] Program contains function that resets to empty list"
+    command: uv run pytest tests/test_activity_six.py::test_inventory_test_invalid_quantity
+- description: "[ACTIVITY SIX] Program correctly adjusts inventory upward"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_five.py::test_reset_list
-- description: "[ACTIVITY FIVE] Program contains function that swaps values correctly"
+    command: uv run pytest tests/test_activity_six.py::test_inventory_adjust_qty_upward
+- description: "[ACTIVITY SIX] Program correctly removes from inventory"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_five.py::test_swap_selected_values
-- description: "[ACTIVITY FIVE] Program can solve a longer problem"
+    command: uv run pytest tests/test_activity_six.py::test_inventory_adjust_qty_downward
+- description: "[ACTIVITY SIX] Program correctly finds a valid single item in inventory"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_five.py::test_mock_longer_problem
-- description: "[ACTIVITY FIVE] Program sorts an arbitrary list correctly"
+    command: uv run pytest tests/test_activity_six.py::test_inventory_query_inventory_positive
+- description: "[ACTIVITY SIX] Program correctly responds to an invalid/missing item in inventory"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_activity_five.py::test_mock_framework_presses
+    command: uv run pytest tests/test_activity_six.py::test_inventory_query_inventory_negative
+- description: "[ACTIVITY SIX] Program correctly adds a single item to inventory"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_six.py::test_inventory_add_item
+- description: "[ACTIVITY SIX] Program correctly shows all inventory"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_six.py::test_inventory_show_all
+- description: "[ACTIVITY SIX] Program inventory functions work independent of the menu"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_six.py::test_main_inventory_all_operations
+- description: "[ACTIVITY SIX] Program conducts a valid sale"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_six.py::test_inventory_valid_sale
+- description: "[ACTIVITY SIX] Program cancels an invalid sale"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_six.py::test_inventory_invalid_sale
