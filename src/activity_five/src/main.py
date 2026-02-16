@@ -12,13 +12,11 @@ def generate(items: int = random.randint(5, 10)) -> list:
     :return: Description
     :rtype: list
     """
-    numbers =  list(
+    return list(
         set(
             [random.randint(1,items) for _ in range(items)]
         )
     )
-    random.shuffle(numbers)
-    return numbers
 
 def reset_instruction() -> list:
     """
@@ -45,9 +43,9 @@ def press(btn: Pin) -> str:
         seconds += .2
         sleep(.1)
     led.off()
-    if .1 < seconds < .5:
+    if .01 < seconds < .5:
         return "short"
-    elif .5 < seconds:
+    elif .5 <= seconds:
         return "long"
 
 def select(values: list = [], choice: list = []) -> list:
@@ -67,41 +65,36 @@ def select(values: list = [], choice: list = []) -> list:
     swap_with = values[second]
     values[first] = swap_with
     values[second] = swap_from
+    print(values)
     return values
+
+
 
 def main(values: list = []):
 
     btn = Pin(16, Pin.IN, Pin.PULL_UP)
 
     print(f"Starting values: {values}")
-
-    instruction = reset_instruction()
     short, count = 0, 0
-
-    while not sorted(values) == values:
-
-        if len(instruction) == 2:
-            values = select(values = values, choice = instruction)
-            instruction = reset_instruction()
-            print(f"New values: {values}")
-
+    instruction = reset_instruction()
+    while values != sorted(values):
         if btn.value() == 0:
             signal = press(btn = btn)
-
-            if signal == "long" and len(instruction) > 1:
-                instruction = reset_instruction()
-                print("RESET")
-                continue
-
+            if signal == "short":
+                count += 1
+                if len(instruction) == 2:
+                    count -= 1
+                    #values = select (values, choice)
+                    values = select(choice = instruction, values = values)
+                    instruction = reset_instruction()
             elif signal == "long":
                 instruction.append(count)
                 count = 0
-                print(instruction)
-            
-            elif signal == "short":
-                count += 1
 
-    print(values)
+            
+            
+
+    pass
 
 if __name__ == "__main__":
     random_list = generate()
