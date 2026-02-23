@@ -29,7 +29,7 @@ def add_item(name: str = "", on_hand: dict = {}) -> bool:
     """
     # Look up item (e.g., apples) in on_hand
     if not query_inventory(name = name, on_hand = on_hand):
-        on_hand[name] = {"price": 0, "qty": 0z}
+        on_hand[name] = {"price": 0, "qty": 0}
         return True
     return False
 
