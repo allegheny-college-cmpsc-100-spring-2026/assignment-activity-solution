@@ -11,6 +11,7 @@
 |Activity 4 |[![Activity 4](../../actions/workflows/activity_four.yml/badge.svg?branch=main)](../../actions/workflows/activity_four.yml)|
 |Activity 5 |[![Activity 5](../../actions/workflows/activity_five.yml/badge.svg?branch=main)](../../actions/workflows/activity_five.yml)|
 |Activity 6 |[![Activity 6](../../actions/workflows/activity_six.yml/badge.svg?branch=main)](../../actions/workflows/activity_six.yml)|
+|Activity 7 |[![Activity 7](../../actions/workflows/activity_seven.yml/badge.svg?branch=main)](../../actions/workflows/activity_seven.yml)|
 
 
 This repository will contain the various activities we will complete during our time together in class. This `README` will regularly update with new content about those activities, to provide context and additional information for what we're doing on a given day. This document may link to additional information, contain diagrams, or provide important details.
@@ -111,3 +112,15 @@ Now that we know some Python, we need to put it to work. The instructor has arbi
 * sell a given valid amount of their inventory
 
 These functions will leverage a new structure, the `dictionary`, which will help us organize our data into something retrievable -- not just storable!
+
+## Activity 7
+
+One of the most important activities that anyone can do is to build a library;
+the reasons should be _obvious_. I mean, books. 
+
+This activity starts us down the path of `Object Oriented Programming` (OOP), in which we treat books and other items as _objects_. Here, we'll examine `properties`, `method`s, and other techniques to make programs much more readable and useful. Namely, we will:
+
+* Create `Book` objects
+* Create `Library` objects
+* Add `Book` objects to a `Library` object
+* Manipulate the state of a `Library` object by implementing `method`s on it

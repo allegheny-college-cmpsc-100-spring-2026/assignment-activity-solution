@@ -1,13 +1,14 @@
 name: Activity Five
 
 on:
-  push:
-    branches: [main]
-  fork:
-    branches: [main]
-
+  workflow_call:
+    outputs:
+      SUCCESS:
+        description: "Value describing the success of the workflow"
+        value: ${{ github.event.workflow_run.conclusion }}
 jobs:
   grade:
+    timeout-minutes: 1
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v6.0.1

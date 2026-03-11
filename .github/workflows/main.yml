@@ -1,0 +1,60 @@
+name: Acitvities Evaluation
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  activity_1:
+    uses: ./.github/workflows/activity_one.yml
+  activity_2:
+    uses: ./.github/workflows/activity_two.yml
+  activity_3:
+    uses: ./.github/workflows/activity_three.yml
+  activity_3_stretch:
+    uses: ./.github/workflows/activity_three_stretch.yml
+  activity_4:
+    uses: ./.github/workflows/activity_four.yml
+  activity_5:
+    uses: ./.github/workflows/activity_five.yml
+  activity_6:
+    uses: ./.github/workflows/activity_six.yml
+  evaluate-base-activities:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    needs: [activity_1, activity_2, activity_3, activity_4, activity_5, activity_6]
+    if: always()
+    steps:
+      - name: Evaluate Activity One
+        if: ${{needs.activity_1.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Two
+        if: ${{needs.activity_2.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Three
+        if: ${{needs.activity_3.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Four
+        if: ${{needs.activity_4.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Four
+        if: ${{needs.activity_4.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Five
+        if: ${{needs.activity_5.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Six
+        if: ${{needs.activity_6.result == 'success'}}
+        run: exit 0
+      - name: Evaluate Activity Seven
+        if: ${{needs.activity_7.result == 'success'}}
+        run: exit 0
+  evaluate-stretch-activities:
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+    needs: [activity_3_stretch]
+    if: always()
+    steps:
+      - name: Evaluate Activity Three Stretch
+        if: ${{needs.activity_3_stretch.result == 'failure' }}
+        run: exit 0

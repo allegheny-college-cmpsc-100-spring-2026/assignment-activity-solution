@@ -1,10 +1,11 @@
 name: Activity One
 
 on:
-  push:
-    branches: [main]
-  fork:
-    branches: [main]
+  workflow_call:
+    outputs:
+      SUCCESS:
+        description: "Value describing the success of the workflow"
+        value: ${{ github.event.workflow_run.conclusion }}
 
 jobs:
   grade:
