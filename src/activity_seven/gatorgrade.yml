@@ -1,0 +1,32 @@
+- description: "[ACTIVITY SEVEN] Program completes without error"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_use_all_menu_functions
+- description: "[ACTIVITY SEVEN] Creates Book objects"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_create_book
+- description: "[ACTIVITY SEVEN] Creates Library objects"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_create_library
+- description: "[ACTIVITY SEVEN] Successfully adds books to library"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_add_book
+- description: "[ACTIVITY SEVEN] Successfully removes books from library"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_remove_book
+- description: "[ACTIVITY SEVEN] Successfully removes books from larger library"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_remove_book_complex
+- description: "[ACTIVITY SEVEN] Successfully searches for and retrieves book"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_search_book
+- description: "[ACTIVITY SEVEN] Successfully displays entire library"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_seven.py::test_display_books

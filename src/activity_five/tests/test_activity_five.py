@@ -43,5 +43,6 @@ def test_mock_longer_problem():
 def test_mock_framework_presses(capsys):
     main([3,4,2,1])
     out, err = capsys.readouterr()
+    print(out)
     out = eval(list(out.split("\n"))[-2])
     assert out == [1, 2, 3, 4]

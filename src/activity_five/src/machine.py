@@ -17,11 +17,11 @@ class Pin:
         else:
             self.press_type = [
                 "short", "short", "short", "long",
+                "short", "long", "short",
                 "short", "long",
+                "short", "short", "long", "short",
                 "short", "long",
-                "short", "short", "long",
-                "short", "long",
-                "short", "short", "short", "short", "long"
+                "short", "short", "short", "short", "long", "short"
             ]
         self.press_start = time.time()
 

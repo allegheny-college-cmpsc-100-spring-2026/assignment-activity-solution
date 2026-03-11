@@ -1,5 +1,6 @@
 from Book import Book
 from Library import Library
+from time import sleep
 
 def menu() -> str:
     return """\033c1. Add a book
@@ -39,7 +40,7 @@ def main() -> None:
             case 5 | _:
                 break
         
-        input("Press any key to continue...")
+        sleep(1)
 
 if __name__ == "__main__":
     main()
