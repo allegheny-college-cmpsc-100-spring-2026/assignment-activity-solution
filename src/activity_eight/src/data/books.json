@@ -1,0 +1,68 @@
+[
+  {
+    "title": "The Girl Who Smiled Beads: A Story of War and What Comes After",
+    "author": "Clemantine Wamariya and Elizabeth Weil",
+    "page_count": 304,
+    "genre": "Nonfiction",
+    "subject": "Memoir/Current Events"
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "page_count": 464,
+    "genre": "Nonfiction",
+    "subject": "History/Science"
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "page_count": 352,
+    "genre": "Nonfiction",
+    "subject": "Memoir/Biography"
+  },
+  {
+    "title": "Under the Banner of Heaven",
+    "author": "Jon Krakauer",
+    "page_count": 400,
+    "genre": "Nonfiction",
+    "subject": "True Crime/History"
+  },
+  {
+    "title": "Between the World and Me",
+    "author": "Ta-Nehisi Coates",
+    "page_count": 152,
+    "genre": "Nonfiction",
+    "subject": "Society & Culture/Race"
+  },
+  {
+    "title": "The Body Keeps the Score",
+    "author": "Bessel van der Kolk",
+    "page_count": 448,
+    "genre": "Nonfiction",
+    "subject": "Psychology/Health"
+  },
+  {
+    "title": "The Once and Future King",
+    "author": "T. H. White",
+    "page_count": 640,
+    "genre": "Fiction"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "page_count": 412,
+    "genre": "Fiction"
+  },
+  {
+    "title": "The Left Hand of Darkness",
+    "author": "Ursula K. Le Guin",
+    "page_count": 304,
+    "genre": "Fiction"
+  },
+  {
+    "title": "The Waste Land",
+    "author": "T.S. Eliot",
+    "page_count": null,
+    "genre": "Poetry"
+  }
+]
