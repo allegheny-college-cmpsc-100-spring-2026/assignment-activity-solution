@@ -1,0 +1,20 @@
+- description: "[ACTIVITY EIGHT] Program normalizes all inputs"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_eight.py::test_normalize_move
+- description: "[ACTIVITY EIGHT] Program correctly decides player wins"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_eight.py::test_player_wins
+- description: "[ACTIVITY EIGHT] Program correctly decides computer wins"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_eight.py::test_computer_wins
+- description: "[ACTIVITY EIGHT] Program correctly decides ties"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_eight.py::test_ties
+- description: "[ACTIVITY EIGHT] Program menu selection works"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_activity_eight.py::test_menu_round
