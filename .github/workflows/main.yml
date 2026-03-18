@@ -21,10 +21,12 @@ jobs:
     uses: ./.github/workflows/activity_six.yml
   activity_7:
     uses: ./.github/workflows/activity_seven.yml
+  activity_8:
+    uses: ./.github/workflows/activity_eight.yml
   evaluate-base-activities:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    needs: [activity_1, activity_2, activity_3, activity_4, activity_5, activity_6, activity_7]
+    needs: [activity_1, activity_2, activity_3, activity_4, activity_5, activity_6, activity_7, activity_8]
     if: always()
     steps:
       - name: Evaluate Activity One
