@@ -12,6 +12,7 @@
 |Activity 5 |[![Activity 5](../../actions/workflows/activity_five.yml/badge.svg?branch=main)](../../actions/workflows/activity_five.yml)|
 |Activity 6 |[![Activity 6](../../actions/workflows/activity_six.yml/badge.svg?branch=main)](../../actions/workflows/activity_six.yml)|
 |Activity 7 |[![Activity 7](../../actions/workflows/activity_seven.yml/badge.svg?branch=main)](../../actions/workflows/activity_seven.yml)|
+|Activity 8 |[![Activity 8](../../actions/workflows/activity_eight.yml/badge.svg?branch=main)](../../actions/workflows/activity_eight.yml)|
 
 
 This repository will contain the various activities we will complete during our time together in class. This `README` will regularly update with new content about those activities, to provide context and additional information for what we're doing on a given day. This document may link to additional information, contain diagrams, or provide important details.
