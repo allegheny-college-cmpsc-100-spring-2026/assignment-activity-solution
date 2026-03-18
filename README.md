@@ -124,3 +124,36 @@ This activity starts us down the path of `Object Oriented Programming` (OOP), in
 * Create `Library` objects
 * Add `Book` objects to a `Library` object
 * Manipulate the state of a `Library` object by implementing `method`s on it
+
+## Activity 8
+
+Let's take a step into the..._future_. After having learned the basics, you're able to take a look at more fully-formed code and do two main things:
+1. understand when it doesn't work exactly as described
+2. learn how to test code
+This activity will introduct `Github Copilot`, specifically _chat agents_: a powerful way to speed up your development process with one key warning: _caveat emptor_ (that is, "buyer beware").
+
+What we mean here is that you'll get what you ask for, but not always what you _want_. For this exercise, we're going to implement a Rock, Paper, Scissors game (stretch goal: "Lizard," and "Spock" if we get there).
+
+However, you're also going need to be able to _test_ this code. This is where the complication comes in: Copilot, while infintely smart, is not always infinitely wise. You'll need to navigate a few new textures in order to achieve this activity.
+
+### The game
+
+There are some _rules_:
+1. User choice must be from a numbered menu:
+```
+1.  Rock
+2.  Paper
+3.  Scissors
+4.  Lizard
+5.  Spock
+```
+2. The program has to keep track of individual wins
+3. If either the computer or the player is up more than `5` games, the program calls a "mercy rule" and ends the program by printing the following and quitting
+```
+MERCY RULE INVOKED: player wins!
+```
+(If the computer wins, the above statement should reflect that.)
+
+### The testing
+
+We also need to be able to test each of these outcomes. We'll do this in [src/activity_eight/tests/test_activity.py](src/activity_eight/tests/test_activity.py). This leverages `pytest` to make judgments as to whether the code conforms to expectations or not.
